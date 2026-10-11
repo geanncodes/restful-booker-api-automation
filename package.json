@@ -1,0 +1,25 @@
+{
+  "name": "restful-booker-api-automation",
+  "version": "1.0.0",
+  "description": "API automation tests for the Restful Booker Booking API through Playwright",
+  "private": true,
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "npx playwright test",
+    "test:smoke": "npx playwright test --grep @smoke",
+    "test:create": "npx playwright test --grep @create",
+    "test:update": "npx playwright test --grep @update",
+    "test:get": "npx playwright test --grep @get",
+    "test:delete": "npx playwright test --grep @delete",
+    "test:negative": "npx playwright test --grep @negative",
+    "test:apidoc": "npx playwright test --grep @apidoc",
+    "test:ui": "npx playwright test --ui",
+    "test:ui:headed": "HEADED=1 npx playwright test --ui --headed",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1",
+    "@types/node": "20.12.7",
+    "typescript": "^5.6.3"
+  }
+}
